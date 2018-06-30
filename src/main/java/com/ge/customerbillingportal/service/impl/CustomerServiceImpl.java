@@ -12,6 +12,10 @@ import com.ge.customerbillingportal.dto.WSCustomerAccount;
 import com.ge.customerbillingportal.entity.CustomerAccount;
 import com.ge.customerbillingportal.service.CustomerService;
 
+/**
+ * @author Nitin K.
+ * Service class containing methods to get customer all data from account id
+ */
 @Service
 public class CustomerServiceImpl implements CustomerService {
 
@@ -33,7 +37,6 @@ public class CustomerServiceImpl implements CustomerService {
 	 * @return CustomerAccount
 	 * @date 2017-07-06
 	 */
-
 	@Override
 	public WSCustomerAccount getCustomerByAccountId(Integer accountId) {
 		// TODO Auto-generated method stub

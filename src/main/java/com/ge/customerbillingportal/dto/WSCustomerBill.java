@@ -4,6 +4,10 @@ import java.math.BigDecimal;
 import java.sql.Date;
 import java.sql.Timestamp;
 
+/**
+ * @author Nitin K.
+ * Object class contains methods to wrap CustomerBill .
+ */
 public class WSCustomerBill {
 	private Integer customerBillId;
 	private BigDecimal billAmount;

@@ -1,5 +1,9 @@
 package com.ge.customerbillingportal.common.consts;
 
+/**
+ * @author Nitin K.
+ * Class containing urls path constants
+ */
 public final class UrlPathConstants {
 
 	// LOGIN URL

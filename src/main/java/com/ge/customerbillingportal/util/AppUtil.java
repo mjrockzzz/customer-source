@@ -11,6 +11,10 @@ import com.ge.customerbillingportal.common.security.TadalinUserDetail;
 import java.util.Locale;
 
 
+/**
+ * @author Nitin K.
+ * Utility class to get message and currently logged in user details
+ */
 @Component
 public class AppUtil {
     private static MessageSource messageSource;
@@ -21,7 +25,7 @@ public class AppUtil {
     }
 
     /**
-     * 读取message信息
+     * To read message information
      * @param messageKey
      * @param args
      * @return
@@ -31,8 +35,8 @@ public class AppUtil {
     }
 
     /**
-     * 获取当前登录用户
-     * @return
+     * To get the currently logged in user details
+     * @return TadalinUserDetail
      */
     public static TadalinUserDetail getAuth() {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();

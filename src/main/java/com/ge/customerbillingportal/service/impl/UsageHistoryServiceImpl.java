@@ -23,6 +23,10 @@ import com.ge.customerbillingportal.entity.CustomerMeter;
 import com.ge.customerbillingportal.service.UsageHistoryService;
 import com.ge.customerbillingportal.util.DateUtility;
 
+/**
+ * @author Nitin K.
+ * Service class containing methods to get usage history data
+ */
 @Service
 public class UsageHistoryServiceImpl implements UsageHistoryService {
 
@@ -37,13 +41,13 @@ public class UsageHistoryServiceImpl implements UsageHistoryService {
 	/**
 	 * @author Nitin K.
 	 * @purpose to get usage history monthly
-	 * @param String
-	 *            startDate, String endDate, Long meterNumber
+	 * @param startDate String
+	 * @param endDate String
+	 * @param meterNumber Long
 	 * @return ResponseEntity<List<UsageHistory>>
 	 * @throws ParseException
 	 * @date 2017-07-10
 	 */
-
 	@Override
 	public ResponseEntity<List<UsageHistory>> getUsageHistoryMonthly(String startDate, String endDate, Long meterNumber)
 			throws ParseException {
@@ -115,13 +119,13 @@ public class UsageHistoryServiceImpl implements UsageHistoryService {
 	/**
 	 * @author Nitin K.
 	 * @purpose to get usage history daily
-	 * @param String
-	 *            startDate, String endDate, Long meterNumber
+	 * @param startDate String
+	 * @param endDate String
+	 * @param meterNumber Long
 	 * @return ResponseEntity<List<UsageHistory>>
 	 * @throws ParseException
 	 * @date 2017-07-11
 	 */
-
 	@Override
 	public ResponseEntity<List<UsageHistory>> getUsageHistoryDaily(String startDate, String endDate, Long meterNumber)
 			throws ParseException {
@@ -194,13 +198,14 @@ public class UsageHistoryServiceImpl implements UsageHistoryService {
 	/**
 	 * @author Nitin K.
 	 * @purpose to get usage history weekly
-	 * @param String
-	 *            startDate, String endDate, Long meterNumber,boolean previous
+	 * @param startDate String
+	 * @param endDate String
+	 * @param meterNumber Long
+	 * @param previous Boolean
 	 * @return ResponseEntity<List<UsageHistory>>
 	 * @throws ParseException
 	 * @date 2017-07-11
 	 */
-
 	@Override
 	public ResponseEntity<List<UsageHistory>> getUsageHistoryWeekly(String startDate, String endDate, Long meterNumber,
 			boolean previous) throws ParseException {
@@ -264,13 +269,13 @@ public class UsageHistoryServiceImpl implements UsageHistoryService {
 	/**
 	 * @author Nitin K.
 	 * @purpose to get usage history hourly
-	 * @param String
-	 *            currentDate, Long meterNumber,boolean custom
+	 * @param currentDate String
+	 * @param meterNumberLong 
+	 * @param custom Boolean
 	 * @return ResponseEntity<List<UsageHistory>>
 	 * @throws ParseException
 	 * @date 2017-07-11
 	 */
-
 	@Override
 	public ResponseEntity<List<UsageHistory>> getUsageHistoryHourly(String currentDate, Long meterNumber,
 			boolean custom) throws ParseException {
@@ -325,13 +330,13 @@ public class UsageHistoryServiceImpl implements UsageHistoryService {
 	/**
 	 * @author Nitin K.
 	 * @purpose to get usage history by bill cycle start date and end date
-	 * @param Integer
-	 *            accountId, Long meterNumber,boolean previous
+	 * @param accountId Integer
+	 * @param meterNumber Long
+	 * @param previous boolean
 	 * @return ResponseEntity<List<UsageHistory>>
 	 * @throws ParseException
 	 * @date 2017-07-11
 	 */
-
 	@Override
 	public ResponseEntity<List<UsageHistory>> getUsageHistoryBillcycle(Integer accountId, Long meterNumber,
 			boolean previous) throws ParseException {

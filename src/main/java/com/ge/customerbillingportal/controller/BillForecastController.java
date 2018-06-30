@@ -15,6 +15,10 @@ import com.ge.customerbillingportal.common.consts.UrlPathConstants;
 import com.ge.customerbillingportal.dto.BillForecast;
 import com.ge.customerbillingportal.service.BillForecastService;
 
+/**
+ * @author Nitin K.
+ * Contains API to get bill forecast interval data.
+ */
 @RestController
 @RequestMapping(value = UrlPathConstants.BILL_FORECAST)
 public class BillForecastController {
@@ -27,8 +31,7 @@ public class BillForecastController {
 	/**
 	 * @author Nitin K.
 	 * @purpose to get bill forecast interval data based on date
-	 * @param Integer
-	 *            accountId
+	 * @param accountId Integer
 	 * @return ResponseEntity<CustomerAccount>
 	 * @throws ParseException
 	 * @date 2017-07-05

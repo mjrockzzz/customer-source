@@ -13,6 +13,11 @@ import com.alibaba.fastjson.JSONObject;
 import com.ge.customerbillingportal.common.Manifest;
 import com.ge.customerbillingportal.common.ResultModel;
 
+/**
+ * @author Nitin K.
+ * Contains APIs for common controller
+ *
+ */
 @RestController
 public class CommonController {
 

@@ -1,5 +1,9 @@
 package com.ge.customerbillingportal.common;
 
+/**
+ * @author Nitin K.
+ * Common class to set and get status code of response object
+ */
 public class ResultModel {
 
     private Integer status;

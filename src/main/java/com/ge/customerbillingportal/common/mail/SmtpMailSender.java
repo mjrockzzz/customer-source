@@ -9,6 +9,10 @@ import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 
 
+/**
+ * @author Nitin K.
+ * Class containing method to send mail
+ */
 public class SmtpMailSender implements MailSender {
 
     private static Logger LOG = LoggerFactory.getLogger(MailSender.class);
@@ -16,11 +20,22 @@ public class SmtpMailSender implements MailSender {
     private JavaMailSender javaMailSender;
     private String from;
 
+    /**
+     * Method sets mail sender and receiver.
+     * @param javaMailSender JavaMailSender
+     * @param from String
+     */
     public void setJavaMailSender(JavaMailSender javaMailSender, String from) {
         this.javaMailSender = javaMailSender;
         this.from = from;
     }
 
+    /**
+     * Method to send mail
+     * @param to String
+     * @param subject String 
+     * @param body String
+     */
     @Override
     public void send(String to, String subject, String body) {
 

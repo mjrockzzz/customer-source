@@ -7,6 +7,10 @@ import java.util.Calendar;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Nitin K.
+ * Utility class contains methods to get string date to sql date format
+ */
 public class DateUtility {
 
 	private static final Logger logger = LoggerFactory.getLogger(DateUtility.class);
@@ -14,12 +18,11 @@ public class DateUtility {
 	/**
 	 * @author Nitin K.
 	 * @purpose to get sql date with reduced given days
-	 * @param String
-	 *            inputDate, int noOfDays
+	 * @param inputDate String
+	 * @param noOfDays int
 	 * @return java.sql.Date
 	 * @throws ParseException
 	 */
-
 	public static java.sql.Date getReducedSqlDatewithDays(String inputDate, int noOfDays) throws ParseException {
 
 		logger.debug("Entered into DateUtility......");
@@ -68,12 +71,11 @@ public class DateUtility {
 	/**
 	 * @author Nitin K.
 	 * @purpose to get sql date with reduced given months
-	 * @param String
-	 *            inputDate, int noOfmonths
+	 * @param inputDate String
+	 * @param noOfmonths int
 	 * @return java.sql.Date
 	 * @throws ParseException
 	 */
-
 	public static java.sql.Date getReducedSqlDatewithMonths(String inputDate, int noOfmonths) throws ParseException {
 
 		logger.debug("Entered into DateUtility......");
@@ -96,8 +98,8 @@ public class DateUtility {
 	/**
 	 * @author Nitin K.
 	 * @purpose to get sql date with added given months
-	 * @param String
-	 *            inputDate, int noOfmonths
+	 * @param inputDate String
+	 * @param noOfmonths int
 	 * @return java.sql.Date
 	 * @throws ParseException
 	 */
@@ -123,12 +125,10 @@ public class DateUtility {
 	/**
 	 * @author Nitin K.
 	 * @purpose to get sql date from String Date
-	 * @param String
-	 *            inputDate
+	 * @param inputDate String
 	 * @return java.sql.Date
 	 * @throws ParseException
 	 */
-
 	public static java.sql.Date getSqlDateFromStringDate(String inputDate) throws ParseException {
 
 		logger.debug("Entered into DateUtility......");
@@ -148,12 +148,11 @@ public class DateUtility {
 	/**
 	 * @author Nitin K.
 	 * @purpose to get difference between dates in terms of months
-	 * @param String
-	 *            startDate, String endDate
+	 * @param startDate String
+	 * @param endDate String
 	 * @return int noOfmonths
 	 * @throws ParseException
 	 */
-
 	public static int getMonthDifference(String startDate, String endDate) throws ParseException {
 
 		logger.debug("Entered into DateUtility......");
@@ -179,12 +178,11 @@ public class DateUtility {
 	/**
 	 * @author Nitin K.
 	 * @purpose to get difference between dates in terms of days
-	 * @param String
-	 *            startDate, String endDate
+	 * @param startDate String
+	 * @param endDate String
 	 * @return int noOfdays
 	 * @throws ParseException
 	 */
-
 	public static int getDaysDifference(String startDate, String endDate) throws ParseException {
 		logger.debug("Entered into DateUtility......");
 		// Parse the received date
@@ -202,8 +200,8 @@ public class DateUtility {
 	/**
 	 * @author Nitin K.
 	 * @purpose to get sql date with added given days
-	 * @param Date
-	 *            inputDate, int noOfDays
+	 * @param inputDate Date
+	 * @param noOfDays int
 	 * @return java.sql.Date
 	 * @throws ParseException
 	 */
@@ -227,12 +225,10 @@ public class DateUtility {
 	/**
 	 * @author Nitin K.
 	 * @purpose to get month of given date
-	 * @param java.sql.Date
-	 *            inputDate
+	 * @param inputDate java.sql.Date
 	 * @return int month
 	 * @throws ParseException
 	 */
-
 	public static int getMonthFromSqlDate(java.sql.Date inputDate) {
 		// Create Calendar instance and get required params
 		Calendar cal = Calendar.getInstance();

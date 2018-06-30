@@ -11,17 +11,32 @@ import org.springframework.data.repository.query.Param;
 import com.ge.customerbillingportal.entity.CustomerAccount;
 import com.ge.customerbillingportal.entity.CustomerForecastIntervalData;
 
+/**
+ * @author Nitin K.
+ * Interface contains method to get CustomerForecastIntervalData data from database
+ */
 public interface CustomerForecastIntervalDataRepository extends CrudRepository<CustomerForecastIntervalData, Integer> {
 
+	/**
+	 * Method to get sum of kWH for given customerAccount and month from CustomerForecastIntervalData table
+	 * @param OfMonth Integer
+	 * @param customerAccount CustomerAccount
+	 * @return BigDecimal
+	 */
 	@Query("SELECT sum(kWH) FROM CustomerForecastIntervalData WHERE month(intervalTime)=:OfMonth  AND customerAccount= :customerAccount")
 	public BigDecimal findKWhByCustomerAccount(@Param("OfMonth") Integer OfMonth,@Param("customerAccount") CustomerAccount customerAccount);
 	
+	/**
+	 * Method to get sum of intervalAmount for given customerAccount and month from CustomerForecastIntervalData table
+	 * @param OfMonth Integer
+	 * @param customerAccount CustomerAccount
+	 * @return BigDecimal
+	 */
 	@Query("SELECT sum(intervalAmount) FROM CustomerForecastIntervalData WHERE month(intervalTime)=:month AND customerAccount = :customerAccount group by month(intervalTime)")
 	public BigDecimal findIntervalAmountByCustomerAccount(@Param("month") Integer month,@Param("customerAccount") CustomerAccount customerAccount);
 	
 	
-	//Day Ahead(Hourly of particular day)
-	 public static final String FIND_DAY_AHEAD= "select acct_id, date(interval_time) meterdate, kWH,kvarh,temperature, time(interval_time) metertime from cust_forecast_interval_data where date(interval_time) =:Ofdate and acct_id =:customerAccount";
+	public static final String FIND_DAY_AHEAD= "select acct_id, date(interval_time) meterdate, kWH,kvarh,temperature, time(interval_time) metertime from cust_forecast_interval_data where date(interval_time) =:Ofdate and acct_id =:customerAccount";
 
 	 //Week Ahead
 	 public static final String FIND_WEEK_AHEAD= "select acct_id, date(interval_time) meterdate,sum(kWH) daily_load,sum(kvarh),max(temperature) temperature from cust_forecast_interval_data where date(interval_time) between :fromDate and :toDate and acct_id =:customerAccount group by date(interval_time) order by interval_time";

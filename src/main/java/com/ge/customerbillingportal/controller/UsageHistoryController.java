@@ -16,6 +16,10 @@ import com.ge.customerbillingportal.common.consts.UrlPathConstants;
 import com.ge.customerbillingportal.dto.UsageHistory;
 import com.ge.customerbillingportal.service.UsageHistoryService;
 
+/**
+ * @author Nitin K.
+ * Controller to get usage history
+ */
 @RestController
 @RequestMapping(value = UrlPathConstants.USAGE_HISTORY)
 public class UsageHistoryController {
@@ -28,8 +32,8 @@ public class UsageHistoryController {
 	/**
 	 * @author Nitin K.
 	 * @purpose to get usage history monthly by default
-	 * @param String
-	 *            currentDate,Long meterNumber
+	 * @param currentDate String
+	 * @param meterNumber Long
 	 * @return ResponseEntity<List<UsageHistory>>
 	 * @throws ParseException
 	 * @date 2017-07-10
@@ -49,8 +53,9 @@ public class UsageHistoryController {
 	/**
 	 * @author Nitin K.
 	 * @purpose to get usage history monthly as per months given by user
-	 * @param String
-	 *            startDate, String endDate,Long meterNumber
+	 * @param startDate String
+	 * @param endDate String
+	 * @param meterNumber Long
 	 * @return ResponseEntity<List<UsageHistory>>
 	 * @throws ParseException
 	 * @date 2017-07-10
@@ -71,8 +76,8 @@ public class UsageHistoryController {
 	/**
 	 * @author Nitin K.
 	 * @purpose to get usage history daily by default
-	 * @param String
-	 *            currentDate,Long meterNumber
+	 * @param currentDate String 
+	 * @param meterNumber Long
 	 * @return ResponseEntity<List<UsageHistory>>
 	 * @throws ParseException
 	 * @date 2017-07-11
@@ -92,8 +97,9 @@ public class UsageHistoryController {
 	/**
 	 * @author Nitin K.
 	 * @purpose to get usage history daily as per given dates
-	 * @param String
-	 *            startDate,String endDate,Long meterNumber
+	 * @param startDate String
+	 * @param endDate String
+	 * @param meterNumber Long
 	 * @return ResponseEntity<List<UsageHistory>>
 	 * @throws ParseException
 	 * @date 2017-07-11
@@ -113,8 +119,8 @@ public class UsageHistoryController {
 	/**
 	 * @author Nitin K.
 	 * @purpose to get usage history weekly by default
-	 * @param String
-	 *            currentDate, Long meterNumber
+	 * @param currentDate String
+	 * @param meterNumber Long
 	 * @return ResponseEntity<List<UsageHistory>>
 	 * @throws ParseException
 	 * @date 2017-07-11
@@ -134,8 +140,8 @@ public class UsageHistoryController {
 	/**
 	 * @author Nitin K.
 	 * @purpose to get usage history of previous week
-	 * @param String
-	 *            currentDate, Long meterNumber
+	 * @param currentDate String
+	 * @param meterNumber 
 	 * @return ResponseEntity<List<UsageHistory>>
 	 * @throws ParseException
 	 * @date 2017-07-11
@@ -199,8 +205,8 @@ public class UsageHistoryController {
 	/**
 	 * @author Nitin K.
 	 * @purpose to get usage history hourly as per given date
-	 * @param String
-	 *            OfDate, Long meterNumber
+	 * @param String OfDate
+	 * @param Long meterNumber
 	 * @return ResponseEntity<List<UsageHistory>>
 	 * @throws ParseException
 	 * @date 2017-07-11
@@ -242,8 +248,8 @@ public class UsageHistoryController {
 	/**
 	 * @author Nitin K.
 	 * @purpose to get usage history of previous bill cycle
-	 * @param Integer
-	 *            accountId,Long meterNumber
+	 * @param Integer accountId
+	 * @param Long meterNumber
 	 * @return ResponseEntity<List<UsageHistory>>
 	 * @throws ParseException
 	 * @date 2017-07-11

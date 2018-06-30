@@ -4,10 +4,15 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import com.ge.customerbillingportal.util.AppUtil;
 
-
+/**
+ * @author Nitin K.
+ * Class containing methods for handling exception for non existing account
+ */
 public class AccountNotExistException extends UsernameNotFoundException {
 
-    public AccountNotExistException() {
+   private static final long serialVersionUID = 1L;
+
+	public AccountNotExistException() {
         super(AppUtil.getMessage("accountNotExistException"));
     }
 

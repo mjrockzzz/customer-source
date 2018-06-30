@@ -1,14 +1,18 @@
 package com.ge.customerbillingportal.common.consts;
 
 
+/**
+ * @author Nitin K.
+ * Enumeration to contain collection of active frozen and deleted status for accounts
+ */
 public enum RecordStatus {
 
-    //激活状态
+    //Activation state
     ACTIVE,
 
-    //冻结状态
+    //Frozen state
     FROZEN,
 
-    //删除状态
+    //Deleted status
     DELETED
 }

@@ -4,6 +4,10 @@ import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * @author Nitin K.
+ * Object class contains methods to wrap CustomerAccount.
+ */
 public class WSCustomerAccount {
 	private Integer accountId;
 	private String customerName;

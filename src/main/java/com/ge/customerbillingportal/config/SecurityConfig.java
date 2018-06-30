@@ -17,11 +17,15 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.oauth2.client.OAuth2RestOperations;
-import org.springframework.security.oauth2.client.filter.OAuth2ClientAuthenticationProcessingFilter;
+//import org.springframework.security.oauth2.client.OAuth2RestOperations;
+//import org.springframework.security.oauth2.client.filter.OAuth2ClientAuthenticationProcessingFilter;
 
 import java.util.Arrays;
 
+/**
+ * @author Nitin K.
+ * Configuration class to enables Spring Security global methods for security customization
+ */
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
@@ -62,9 +66,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 
     //    @Autowired
-//    protected void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-//        auth.userDetailsService(mzUserDetailService).passwordEncoder(EncoderUtil.pwdEncoder);
-//    }
+    //   protected void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+    //    auth.userDetailsService(mzUserDetailService).passwordEncoder(EncoderUtil.pwdEncoder);
+    //    }
 
     @Bean
     public DaoAuthenticationProvider daoAuthenticationProvider() {
@@ -82,9 +86,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     /**
-     * 判断参数里的Profile是否在激活的Profile里, 推荐使用ApplicationContextRegister里的方法
-     * Note: 在不设置任何Profile时, ActiveProfile会为空, 但是实际上会使用DefaultProfile
-     * @return
+     * Judging the parameters profile is it active Profile 
+	 * in, recommended Use ApplicationContextRegister in the method
+     * Note: Do not set any Profile 
+     * time, ActiveProfile will be empty, 
+     * but actually will use DefaultProfile
      */
     @Deprecated
     private Boolean isProfileActive (String testProfile) {

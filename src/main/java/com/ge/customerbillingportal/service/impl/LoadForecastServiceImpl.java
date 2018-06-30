@@ -22,6 +22,10 @@ import com.ge.customerbillingportal.entity.CustomerBill;
 import com.ge.customerbillingportal.service.LoadForecastService;
 import com.ge.customerbillingportal.util.DateUtility;
 
+/**
+ * @author Nitin K.
+ * Service class containing methods to get load forecast of a day ahead and a week ahead
+ */
 @Service
 public class LoadForecastServiceImpl implements LoadForecastService {
 
@@ -36,13 +40,12 @@ public class LoadForecastServiceImpl implements LoadForecastService {
 	/**
 	 * @author Nitin K.
 	 * @purpose to get load forecast of a day ahead
-	 * @param String
-	 *            currentDate,Integer accountId
+	 * @param currentDate String
+	 * @param accountId Integer
 	 * @return ResponseEntity<List<LoadForecast>>
 	 * @throws ParseException
 	 * @date 2017-07-12
 	 */
-
 	@Override
 	public ResponseEntity<List<LoadForecast>> getLoadForecastDayAhead(String currentDate, Integer accountId)
 			throws ParseException {
@@ -102,13 +105,12 @@ public class LoadForecastServiceImpl implements LoadForecastService {
 	/**
 	 * @author Nitin K.
 	 * @purpose to get load forecast of a week ahead
-	 * @param String
-	 *            currentDate,Integer accountId
+	 * @param currentDate String
+	 * @param accountId Integer
 	 * @return ResponseEntity<List<LoadForecast>>
 	 * @throws ParseException
 	 * @date 2017-07-12
 	 */
-
 	@Override
 	public ResponseEntity<List<LoadForecast>> getLoadForecastWeekAhead(String currentDate, Integer accountId)
 			throws ParseException {

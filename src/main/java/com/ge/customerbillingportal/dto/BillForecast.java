@@ -4,6 +4,10 @@ import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.util.List;
 
+/**
+ * @author Nitin K.
+ * Object class to wrap BillForecast request and response 
+ */
 public class BillForecast {
 
 	private BigDecimal monthToDateConsumptionkWh;

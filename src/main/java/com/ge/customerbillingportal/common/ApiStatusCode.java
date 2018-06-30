@@ -1,5 +1,9 @@
 package com.ge.customerbillingportal.common;
 
+/**
+ * @author Nitin K.
+ * Utility class containing methods to return status code of APIs with description
+ */
 public class ApiStatusCode {
 
     private Integer statusCode;
@@ -27,13 +31,13 @@ public class ApiStatusCode {
     }
 
     /**
-     * Status 200, 正确API返回状态
+     * Status 200, Correct API return status
      */
     public static ApiStatusCode STATUS_200_OK = new ApiStatusCode(200, null);
 
 
     /**
-     * Status 1000, 未定义异常
+     * Status 1000, Undefined exception
      */
     public static ApiStatusCode STATUS_1000_UNDEFINED_EXCEPTION = new ApiStatusCode(1000, "undefined exception");
 

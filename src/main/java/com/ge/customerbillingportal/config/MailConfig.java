@@ -11,6 +11,10 @@ import org.springframework.mail.javamail.JavaMailSender;
 import com.ge.customerbillingportal.common.mail.MailSender;
 import com.ge.customerbillingportal.common.mail.SmtpMailSender;
 
+/**
+ * @author Nitin K.
+ * Bean configuration class to register mail service interfaces
+ */
 @Configuration
 public class MailConfig {
 

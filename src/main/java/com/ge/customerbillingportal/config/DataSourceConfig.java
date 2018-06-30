@@ -13,6 +13,10 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
 
+/**
+ * @author Nitin K.
+ * Bean configuration class to register MyBatis mapper interfaces
+ */
 @Configuration
 @EnableTransactionManagement
 @MapperScan(basePackages = "com.ge.customerbillingportal.mapper")

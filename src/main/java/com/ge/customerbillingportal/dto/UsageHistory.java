@@ -4,6 +4,10 @@ import java.math.BigDecimal;
 import java.sql.Date;
 import java.sql.Time;
 
+/**
+ * @author Nitin K.
+ * Object class contains methods to wrap UsageHistory.
+ */
 public class UsageHistory {
 
 	private BigDecimal meternumber;

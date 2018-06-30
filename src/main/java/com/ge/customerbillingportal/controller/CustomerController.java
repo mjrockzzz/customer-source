@@ -12,10 +12,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.ge.customerbillingportal.common.consts.UrlPathConstants;
 import com.ge.customerbillingportal.dto.WSCustomerAccount;
-import com.ge.customerbillingportal.entity.CustomerAccount;
+//import com.ge.customerbillingportal.entity.CustomerAccount;
 import com.ge.customerbillingportal.service.CustomerService;
 
 
+/**
+ * @author Nitin K.
+ * Contains API to get customer all data from account id
+ */
 @RestController
 @RequestMapping(value = UrlPathConstants.CUSTOMER)
 public class CustomerController {
@@ -28,7 +32,7 @@ public class CustomerController {
 	/**
 	 * @author Nitin K.
 	 * @purpose to get customer all data from account id
-	 * @param Integer accountId
+	 * @param accountId Integer
 	 * @return ResponseEntity<CustomerAccount>
 	 * @date 2017-07-05
 	 */

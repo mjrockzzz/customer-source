@@ -16,6 +16,10 @@ import com.ge.customerbillingportal.common.consts.UrlPathConstants;
 import com.ge.customerbillingportal.dto.LoadForecast;
 import com.ge.customerbillingportal.service.LoadForecastService;
 
+/**
+ * @author Nitin K.
+ * Contains APIs to get load forecast of  day ahead and week ahead
+ */
 @RestController
 @RequestMapping(value = UrlPathConstants.LOAD_FORECAST)
 public class LoadForecastController {
@@ -28,8 +32,8 @@ public class LoadForecastController {
 	/**
 	 * @author Nitin K.
 	 * @purpose to get load forecast of a day ahead
-	 * @param String
-	 *            currentDate,Integer accountId
+	 * @param currentDate String
+	 * @param accountId Integer
 	 * @return ResponseEntity<List<LoadForecast>>
 	 * @throws ParseException
 	 * @date 2017-07-12

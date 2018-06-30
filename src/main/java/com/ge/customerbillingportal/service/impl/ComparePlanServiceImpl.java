@@ -19,6 +19,10 @@ import com.ge.customerbillingportal.entity.CustomerBill;
 import com.ge.customerbillingportal.service.ComparePlanService;
 import com.ge.customerbillingportal.util.DateUtility;
 
+/**
+ * @author Nitin K.
+ * Service class containing methods to get alternate rate plan and amount
+ */
 @Service
 public class ComparePlanServiceImpl implements ComparePlanService {
 
@@ -33,14 +37,12 @@ public class ComparePlanServiceImpl implements ComparePlanService {
 	/**
 	 * @author Nitin K.
 	 * @purpose to get alternate rate plan and amount
-	 * @param String
-	 *            currentDate,Integer accountId
+	 * @param currentDate String
+	 * @param accountId Integer
 	 * @return ResponseEntity<ComparePlan>
 	 * @throws ParseException 
 	 * @date 2017-07-17
 	 */
-
-
 	@Override
 	public ResponseEntity<ComparePlan> getAlternatePlanData(Integer accountId,String currentDate) throws ParseException {
 		// TODO Auto-generated method stub

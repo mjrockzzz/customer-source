@@ -10,7 +10,7 @@ import com.ge.customerbillingportal.mapper.AuthMapper;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
-import org.springframework.core.env.Environment;
+//import org.springframework.core.env.Environment;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -20,6 +20,10 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Nitin K.
+ * Class containing service to get user details
+ */
 @Service
 @Primary
 public class TadalinUserDetailService implements UserDetailsService {
@@ -30,8 +34,8 @@ public class TadalinUserDetailService implements UserDetailsService {
     @Autowired
     private AuthMapper authMapper;
 
-    @Autowired
-    private Environment environment;
+   // @Autowired
+    //private Environment environment;
 
     @Override
     public TadalinUserDetail loadUserByUsername(String s) throws UsernameNotFoundException {
@@ -40,7 +44,7 @@ public class TadalinUserDetailService implements UserDetailsService {
             throw new AccountNotExistException();
         }
 
-        //Step-01: 根据名称查找用户Entity
+        //Step-01: Find a user by name Entity
         AdminAccount account = adminAccountRepository.findByAdminName(s);
 
         if (null == account) {
@@ -51,7 +55,7 @@ public class TadalinUserDetailService implements UserDetailsService {
             throw new AccountFrozenException();
         }
 
-        //Step-02: 查找用户角色, 默认自带ROLE_ADMIN
+        //Step-02: Find user roles, comes with default ROLE_ADMIN
         List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
         authorities.add(new SimpleGrantedAuthority("ROLE_TEST"));
         List<String> roles = authMapper.findRolesByAdminId(account.getId());

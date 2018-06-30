@@ -1,7 +1,10 @@
 package com.ge.customerbillingportal.dto;
 
 import java.util.Date;
-
+/**
+ * @author Nitin K.
+ * Object class contains methods to wrap CustomerPayment.
+ */
 public class WSCustomerPayment {
 
 	private Integer customerPaymentId;
@@ -74,6 +77,4 @@ public class WSCustomerPayment {
 	public void setNickName(String nickName) {
 		this.nickName = nickName;
 	}
-	
-	
 }

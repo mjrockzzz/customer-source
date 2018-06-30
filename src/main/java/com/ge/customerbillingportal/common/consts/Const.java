@@ -2,15 +2,19 @@ package com.ge.customerbillingportal.common.consts;
 
 import java.math.BigDecimal;
 
+/**
+ * @author Nitin K.
+ * Class containing constants
+ */
 public class Const {
 
     /**
-     * 密码混淆用的
+     * Password confused with
      */
     public static final String cryptSecret = "tadalin-rest-application";
 
     /**
-     * 默认分页大小: 15
+     * Default page size: 15
      */
     public static final Integer DEFAULT_PAGE_SIZE = 15;
 

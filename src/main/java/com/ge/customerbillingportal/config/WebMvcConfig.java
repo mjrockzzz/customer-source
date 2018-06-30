@@ -9,13 +9,16 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
+/**
+ * @author NitinK.
+ * Bean configuration class to configure CorsFilter
+ */
 @Configuration
 public class WebMvcConfig extends WebMvcConfigurerAdapter {
 
 
     /**
-     * 允许CORS
-     * @return
+     * allow CORS
      */
     @Bean
     public CorsFilter corsFilter() {

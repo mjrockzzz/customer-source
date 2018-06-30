@@ -6,6 +6,10 @@ import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
+/**
+ * @author Nitin K.
+ * Utility class containing methods to change date time format 
+ */
 public class TimeUtil {
 
     private static DateTimeFormatter format = DateTimeFormat.forPattern("yyyy-MM-dd");

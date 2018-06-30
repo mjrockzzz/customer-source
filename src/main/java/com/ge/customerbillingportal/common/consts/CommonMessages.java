@@ -1,5 +1,9 @@
 package com.ge.customerbillingportal.common.consts;
 
+/**
+ * @author Nitin K.
+ * Class containing common messages. 
+ */
 public final class CommonMessages {
 	
 	//Common Messages

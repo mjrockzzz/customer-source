@@ -24,6 +24,10 @@ import com.ge.customerbillingportal.entity.CustomerMeterIntervalData;
 import com.ge.customerbillingportal.service.BillForecastService;
 import com.ge.customerbillingportal.util.DateUtility;
 
+/**
+ * @author Nitin K.
+ * Service class containing methods to get forecast interval data
+ */
 @Service
 public class BillForecastServiceImpl implements BillForecastService {
 
@@ -44,8 +48,7 @@ public class BillForecastServiceImpl implements BillForecastService {
 	/**
 	 * @author Nitin K.
 	 * @purpose to get bill forecast interval data based on date
-	 * @param Integer
-	 *            accountId
+	 * @param accountId Integer
 	 * @return ResponseEntity<CustomerAccount>
 	 * @throws ParseException
 	 * @date 2017-07-05

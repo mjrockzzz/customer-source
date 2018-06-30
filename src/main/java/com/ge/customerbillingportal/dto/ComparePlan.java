@@ -2,6 +2,10 @@ package com.ge.customerbillingportal.dto;
 
 import java.math.BigDecimal;
 
+/**
+ * @author Nitin K.
+ * Object class contains methods to wrap ComparePlan.
+ */
 public class ComparePlan {
 
 	private String currentPlan;

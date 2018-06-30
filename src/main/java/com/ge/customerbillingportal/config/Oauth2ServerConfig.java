@@ -18,6 +18,10 @@ import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.InMemoryTokenStore;
 
 
+/**
+ * @author Nitin K
+ * Configuration class to configure Oauth2Server
+ */
 @Configuration
 public class Oauth2ServerConfig {
 

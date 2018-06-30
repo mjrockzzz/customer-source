@@ -1,5 +1,9 @@
 package com.ge.customerbillingportal.dto;
 
+/**
+ * @author Nitin K.
+ * Object class to wrap user for response.
+ */
 public class UserResponse {
 
 	private String userName;

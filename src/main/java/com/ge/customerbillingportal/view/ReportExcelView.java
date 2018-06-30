@@ -8,6 +8,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
 
+/**
+ * @author Nitin K.
+ * Utility class contains methods to get given object response in excel format
+ */
 @Component("reportExcelView")
 public class ReportExcelView extends AbstractXlsxView {
 

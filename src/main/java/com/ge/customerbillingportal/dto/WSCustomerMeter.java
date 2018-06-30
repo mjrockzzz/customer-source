@@ -4,6 +4,10 @@ import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.util.Date;
 
+/**
+ * @author Nitin K.
+ * Object class contains methods to wrap CustomerMeter.
+ */
 public class WSCustomerMeter {
 	private BigDecimal meterNumber;
 	private Date startDate;

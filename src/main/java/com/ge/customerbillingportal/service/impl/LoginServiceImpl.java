@@ -14,6 +14,10 @@ import com.ge.customerbillingportal.dto.UserResponse;
 import com.ge.customerbillingportal.entity.CustomerAccount;
 import com.ge.customerbillingportal.service.LoginService;
 
+/**
+ * @author Nitin K.
+ * Service class containing methods to login to customer billing portal
+ */
 @Service
 public class LoginServiceImpl implements LoginService {
 
@@ -24,13 +28,11 @@ public class LoginServiceImpl implements LoginService {
 	
 	/**
 	 * @author Nitin K.
-	 * @purpose to login to customer biling portal
+	 * @purpose to login to customer billing portal
 	 * @param CustomerAccount customerAccoun
 	 * @return ResponseEntity<AuthenticateUser>
 	 * @date 2017-07-05
 	 */
-
-
 	@Override
 	public ResponseEntity<AuthenticateUser> login(CustomerAccount customerAccount) {
 		// TODO Auto-generated method stub

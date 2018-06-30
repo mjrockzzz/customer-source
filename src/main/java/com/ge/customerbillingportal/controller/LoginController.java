@@ -14,6 +14,10 @@ import com.ge.customerbillingportal.dto.AuthenticateUser;
 import com.ge.customerbillingportal.entity.CustomerAccount;
 import com.ge.customerbillingportal.service.LoginService;
 
+/**
+ * @author Nitin K.
+ * Contains API to login to customer billing portal
+ */
 @RestController
 @RequestMapping(value = UrlPathConstants.LOGIN)
 public class LoginController {
@@ -26,7 +30,7 @@ public class LoginController {
 	/**
 	 * @author Nitin K.
 	 * @purpose to login to customer billing portal
-	 * @param {"username":"", "password":""}
+	 * @param customerAccount CustomerAccount
 	 * @return ResponseEntity<AuthenticateUser>
 	 * @date 2017-07-05
 	 */

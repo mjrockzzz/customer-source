@@ -15,6 +15,10 @@ import com.ge.customerbillingportal.common.consts.UrlPathConstants;
 import com.ge.customerbillingportal.dto.ComparePlan;
 import com.ge.customerbillingportal.service.ComparePlanService;
 
+/**
+ * @author Nitin K.
+ * Contains API to get alternate rate plan and amount
+ */
 @RestController
 @RequestMapping(value = UrlPathConstants.COMPARE_PLAN)
 public class ComparePlanController {
@@ -27,8 +31,8 @@ public class ComparePlanController {
 	/**
 	 * @author Nitin K.
 	 * @purpose to get alternate rate plan and amount
-	 * @param String
-	 *            currentDate,Integer accountId
+	 * @param currentDate String
+	 * @param accountId Integer
 	 * @return ResponseEntity<ComparePlan>
 	 * @throws ParseException 
 	 * @date 2017-07-17

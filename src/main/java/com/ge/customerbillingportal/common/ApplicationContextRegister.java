@@ -12,6 +12,10 @@ import org.springframework.stereotype.Component;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * @author Nitin K.
+ * Conponent class to register ApplicationContext.
+ */
 @Component
 public class ApplicationContextRegister implements ApplicationContextAware, EnvironmentAware {
 
@@ -27,7 +31,7 @@ public class ApplicationContextRegister implements ApplicationContextAware, Envi
     @Override
     public void setApplicationContext(ApplicationContext app) throws BeansException {
         applicationContext = app;
-        LOG.warn("ContextRegister已经正常设置ApplicationContext");
+        LOG.warn("ContextRegister has set the ApplicationContext normally");
     }
 
     @Override
@@ -46,12 +50,12 @@ public class ApplicationContextRegister implements ApplicationContextAware, Envi
             }
         }
 
-        LOG.warn("ContextRegister已经正常设置Environment");
+        LOG.warn("ContextRegister has set Environment normally");
     }
 
 
     /**
-     * 判断是否激活某个Profile
+     * Determine whether to activate one Profile
      * @param profile
      * @return
      */

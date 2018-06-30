@@ -8,9 +8,15 @@ import com.ge.customerbillingportal.entity.AdminAccount;
 import java.util.Collection;
 
 
+/**
+ * @author Nitin K.
+ * Class containing methods to set and get user name and password and account status
+ */
 public class TadalinUserDetail extends AdminAccount implements UserDetails {
 
-    public TadalinUserDetail(AdminAccount account, Collection<? extends GrantedAuthority> authorities) {
+    private static final long serialVersionUID = 1L;
+
+	public TadalinUserDetail(AdminAccount account, Collection<? extends GrantedAuthority> authorities) {
 
         super.setId(account.getId());
         super.setAdminName(account.getAdminName());
